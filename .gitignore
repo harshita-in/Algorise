@@ -1,0 +1,78 @@
+# ==========================================
+# 1. Environment Secrets & Configs (CRITICAL)
+# ==========================================
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# ==========================================
+# 2. Node.js & MERN Stack (Backend/Frontend)
+# ==========================================
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Build outputs (React/Vite/Next)
+dist/
+build/
+.next/
+out/
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ==========================================
+# 3. Python & Machine Learning
+# ==========================================
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+pyvenv.cfg
+
+# Python bytecode and caches
+pycache/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data & Large ML Files (Don't push heavy data to Git)
+data/
+datasets/
+*.csv
+*.jsonl
+*.h5
+*.pkl
+*.pickle
+*.pt
+*.pth
+*.onnx
+
+# ML Models output folder (if you save trained models)
+models/
+runs/
+
+# ==========================================
+# 4. OS & IDE Specific Files
+# ==========================================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp

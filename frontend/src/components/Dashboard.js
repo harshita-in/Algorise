@@ -11,6 +11,7 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import StockChart from './StockChart';
+import { API_BASE_URL } from '../config';
 
 export default function Dashboard({ onBack }) {
   // Inputs state
@@ -60,7 +61,7 @@ export default function Dashboard({ onBack }) {
       try {
         const queryParams = new URLSearchParams({ q: searchQuery });
         
-        const response = await fetch(`/api/search?${queryParams.toString()}`);
+        const response = await fetch(`${API_BASE_URL}/api/search?${queryParams.toString()}`);
         if (response.ok) {
           const data = await response.json();
           setSearchResults(data);
@@ -142,7 +143,7 @@ export default function Dashboard({ onBack }) {
     }, 200);
 
     try {
-      const res = await fetch('/api/predict', {
+      const res = await fetch(`${API_BASE_URL}/api/predict`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
